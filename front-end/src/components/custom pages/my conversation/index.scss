@@ -1,0 +1,67 @@
+
+.btn-group{
+    .dropdown-menu{
+        display: block;
+        max-height: 300px;
+        overflow-y: auto;
+        left: 0;
+        right: 0;
+        transition: max-height 250ms ease-in-out;
+        .list-notes{
+            display: flex;
+            align-items: center;
+            margin: 2% 0;
+            padding: 0 2%;
+            .dropdown-item{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                .capitalize{
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+    .dropdown-menu.close{
+        margin: 0;
+        padding: 0;
+        max-height: 0px;
+        transition: max-height 250ms ease-in-out;
+    }
+}
+h1{
+    div{
+        display: inline-flex;
+        transition: all 0.5s;
+    }
+    .rotate-letter{
+        transition: all 0.5s;
+        color: rgba(19, 18, 19, 1.0);
+        transform: rotate(60deg) !important;
+    }
+}
+    
+.input-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5vh;
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        textarea{
+            width: 100%;
+            min-height: 35vh;
+            padding: 0 1%;
+        }
+    }
+
+}
+.buttons-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 5%;
+}   

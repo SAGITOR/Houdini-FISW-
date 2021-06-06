@@ -1,0 +1,160 @@
+.col-2{
+
+    min-height: 100vh;
+    padding: 0 !important;
+    transition: all 0.3s;
+ 
+    .sidenav {
+        height: 100%;
+        width: 100%; /* Full-height: remove this if you want "auto" height */
+        background-color: rgba(172, 168, 169, 0.952);; /* Black */
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 20px;
+        .navbar-collapse{
+            width: 100%;
+            ul{ 
+                .sidebar-heading{
+                    font-size: 0.8em;
+                    font-weight: bold;
+                    text-align: left;
+                    margin-bottom: 0.3rem;
+                    padding: 0 0.9rem;
+                    color: rgba(19, 18, 18, 0.411);
+
+                    text-overflow: ellipsis;
+                    margin-left: 5%;
+                    margin-right: 5%;
+                    display: block;
+                    overflow: hidden
+                }
+                .sidebar-divider{
+                    margin-left: 1em;
+                    margin-right: 1em;
+                }
+                .nav-item{
+                    .nav-link{
+
+                        padding-left: 0;
+                        padding-right: 0;
+                        span{
+                            font-size: 0.8em;
+                        }
+                        .span-header{
+                            font-weight: bold;
+                        }
+                        .sidebar-icon{
+                            position: relative;
+                            bottom: 0.5vh;
+                            padding-right: 5%;
+                            transition: all 0.5s;
+                        }
+                    }
+
+                    .nav-link.active{
+                        .sidebar-icon{
+                            color: rgba(19, 18, 19, 0.781);
+                        }
+                        span{
+                            color: rgba(236, 230, 230, 0.952);
+                            transition: all 0.5s;
+                        }
+                        &:hover{
+                            .sidebar-icon{
+                                transform: rotate(360deg);
+                                font-size: xx-large; 
+                                color: rgba(19, 18, 19, 1.0);
+                            }
+                            span{
+                                font-weight: bold;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+        .btn.btn-secondary{
+            position: relative;
+            i{
+                transition: transform 0.3s;
+            }
+            i.rotate-icon{
+                transform: rotate(180deg);  
+            }
+        }
+    }
+    
+}
+
+.col-2.open{
+    width: 15%;
+}
+
+.col-2.close{
+    width: 8%;
+    .sidenav {
+        .navbar-collapse{
+            ul{
+                .sidebar-heading{
+                    text-align: center;
+                    padding: 0;
+                }
+                .span-header{
+                    display: none;
+                }
+                .nav-item{
+                    .nav-link{
+                        .sidebar-icon{
+                            display: block;
+                        }
+                        span{
+                            font-size: 0.75em;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .col-2{
+        .sidenav {
+            .navbar-collapse{
+                ul{
+                    .sidebar-heading{
+                        text-align: center;
+                        padding: 0;//ver bien esto en dispositivos mas pequeños
+                        font-size: 0.65em;  
+                    }
+                    .nav-item{
+                        .nav-link{
+
+                            .sidebar-icon{
+                                display: block;
+                            }
+                            span{
+                                font-size: 0.65em;  
+                            }
+                            .span-header{
+                                display: none;
+                            }
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .col-2.close{
+        width: 0%;
+        .sidenav {
+            .btn.btn-secondary{
+                position: fixed;
+                bottom: 20%;
+                z-index: 2000;
+            }
+        }
+    }
+    
+}

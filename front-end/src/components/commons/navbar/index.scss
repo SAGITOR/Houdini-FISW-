@@ -1,0 +1,55 @@
+@import "../../../consts/colors.scss";
+
+.row{
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    .navbar{
+        min-height: 10vh;
+        .container-fluid{
+            .navbar-collapse{
+                padding: 0vh 5vh 0vh 5vh;
+                max-height: 400px;
+                transition: max-height 250ms ease-in-out;
+                overflow: hidden;
+                ul{
+                    li{
+                        a{
+                            transition: all 0.5s;
+                            &:hover{
+                                font-size: 1.2em;
+                                background-color: #f3f1f1;
+                                text-decoration: underline;
+                                text-decoration-color: black;
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                }
+            }
+                
+
+        }
+    }
+    
+}
+@media screen and (max-width: 991px) {
+    .row{
+        .navbar{
+            .container-fluid{
+                .navbar-collapse{
+                    top: 100%;
+                    left: 0;
+                    position: absolute;
+                    background-color: #dee1e4;
+                    padding-bottom: 2%;
+                }
+                .navbar-collapse.hidden{
+                    max-height: 0px;
+                    padding-bottom: 0;
+                    transition: max-height 250ms ease-in-out;
+                }
+            }   
+        }
+    }
+}

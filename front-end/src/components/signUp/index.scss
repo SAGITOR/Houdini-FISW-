@@ -1,0 +1,72 @@
+.row-signup{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    .card{
+        padding: 0;
+        /*input:active,
+        input:focus,
+        textarea:active,
+        textarea:focus {
+            border: 3px solid blue;
+            outline-style: solid;
+            outline-width: 2px;
+            outline-color: green;
+            box-shadow: 0 0 0 0.25rem rgba(238, 13, 62, 0.952);
+            border-collapse: collapse;
+        }*/
+        .card-body{
+            .btn{
+                text-decoration: none;
+                color: white;
+                transition: all 0.5s;
+                &:hover{
+                    font-size: 1.2em;
+                    background-color: #0033FF;
+                    text-decoration: underline;
+                    font-weight: 600;
+                }
+            }
+            a{
+                text-decoration: none;
+                color: #003399;
+                transition: all 0.5s;
+                &:hover{
+                    font-size: 1.2em;
+                    text-decoration: underline;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+.login{
+    width: 100%;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    .login-front{
+        transition: all 0.5s;
+        display: block;
+        text-decoration: underline;
+    }
+    .login-back{
+        transition: all 0.5s;
+        display: none;
+    }
+    &:hover{
+        .login-front {
+            display: none;
+        }
+        .login-back {
+            display: block;
+        }
+
+    }
+}

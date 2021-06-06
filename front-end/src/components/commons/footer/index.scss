@@ -1,0 +1,13 @@
+.footer-container{
+    width: 100%;
+    min-height: 6vh;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    justify-content: center;
+    bottom: 0;
+    background-color: black;
+    .footer-text{
+        color: white;
+    }
+}
